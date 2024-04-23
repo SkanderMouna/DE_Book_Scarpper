@@ -17,6 +17,6 @@
 German books websites:
 * Thalia (Daniel)
 * kulturkaufhaus(Mouna)
-* Google api (Rasul)
+* Hugendubel (Rassul)
 
 Json file for datasets 
