@@ -1,0 +1,31 @@
+# Quelle: Asset-Service
+
+User-agent: *
+Disallow: /shop/home/kunde/
+Disallow: /shop/home/kundenbewertung/
+Disallow: /konto/
+Disallow: /shop/home/login/
+Disallow: /shop/home/login/login
+Disallow: /shop/home/merkliste/
+Disallow: /shop/home/warenkorb/add
+Disallow: /warenkorb/anzeigen
+Disallow: /warenkorb/hinzufuegen
+Disallow: /bewertung/verfassen
+Disallow: /api/
+Disallow: /suche/v1/
+Disallow: /affiliate/
+Disallow: /downloadcode/
+Disallow: /bestelluebersicht
+Disallow: /abokaufen/abokauf
+Disallow: /empfehlungen/
+Disallow: /shop/home/newsletter/doi.html
+Disallow: /shop/home/newsletter/abmelden/success.html
+Disallow: /anonymisieren/loeschen
+Disallow: /base/
+Disallow: /kontakt/bewertungen/
+
+
+Sitemap: https://www.thalia.de/sitemaps/kategorie/kategorie.xml
+Sitemap: https://www.thalia.de/sitemaps/artikel/artikel.xml
+Sitemap: https://www.thalia.de/sitemaps/autoren/autoren.xml
+Sitemap: https://www.thalia.de/sitemaps/themenwelt/themenwelt.xml
