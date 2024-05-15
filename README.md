@@ -6,12 +6,13 @@ Note: all object content should be in german language
 {
 "title": "book title",
 "description":"long description of the book";
-"author":"ich bin den Author", //as an array
+"author":["ich bin den Author","Author 2"], //as an array
 "review":"reviews",
 "imagesUrls":["cover image url","second image url"],
 "ISPN":"",
 "bookType":"Taschenbuch"||"Gebunden",
 "release":"05.05.2022",
+"category": ["fantasy"]
 ""
 
 
