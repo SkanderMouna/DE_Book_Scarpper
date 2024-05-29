@@ -14,16 +14,16 @@ Note: all object content should be in german language
 "release":"05.05.2022",
 "category": ["fantasy"]
 ""
-
-
-
 }
 ```
 
 
 ## German books websites:
-* Thalia (Daniel)
-* kulturkaufhaus(Mouna)
-* Hugendubel (Rassul)
+* `Daniel` [Thalia](https://www.thalia.de/) [GitHub Repository] ()
+* `Mouna SKANDER`
+  *  [Kulturkaufhaus](https://www.kulturkaufhaus.de/en/start) [GitHub Repository] (https://github.com/SkanderMouna/Book-Scraping)
+  *  [Perlentaucher](https://www.perlentaucher.de/) [GitHub Repository](https://github.com/SkanderMouna/perlentaucher_bucher_scraper)
+* `Rassul` [Hugendubel] (https://www.hugendubel.de/de/) [GitHub Repository] ()
+
 
 
