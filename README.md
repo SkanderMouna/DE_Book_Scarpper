@@ -24,7 +24,8 @@ Note: all object content should be in german language
   *  [Kulturkaufhaus](https://www.kulturkaufhaus.de/en/start) 
   *  [Perlentaucher](https://www.perlentaucher.de/)
   *  [Bücher](https://www.buecher.de/)
-* `Rassul` [Hugendubel] (https://www.hugendubel.de/de/) [GitHub Repository]()
+* `Rassul` [GitHub Repository]()
+  *  [Hugendubel](https://www.hugendubel.de/de/) 
 
 
 
