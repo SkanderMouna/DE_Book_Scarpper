@@ -20,9 +20,10 @@ Note: all object content should be in german language
 
 ## German books websites:
 * `Daniel` [Thalia](https://www.thalia.de/) [GitHub Repository]()
-* `Mouna SKANDER`
-  *  [Kulturkaufhaus](https://www.kulturkaufhaus.de/en/start) [GitHub Repository](https://github.com/SkanderMouna/Book-Scraping)
-  *  [Perlentaucher](https://www.perlentaucher.de/) [GitHub Repository](https://github.com/SkanderMouna/perlentaucher_bucher_scraper)
+* `Mouna SKANDER` [GitHub Repository](https://github.com/SkanderMouna/GermanBooksScrapersDeepLearning.git)
+  *  [Kulturkaufhaus](https://www.kulturkaufhaus.de/en/start) 
+  *  [Perlentaucher](https://www.perlentaucher.de/)
+  *  [Bücher]([https://www.perlentaucher.de/](https://www.buecher.de/))
 * `Rassul` [Hugendubel] (https://www.hugendubel.de/de/) [GitHub Repository]()
 
 
