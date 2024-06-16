@@ -19,7 +19,8 @@ Note: all object content should be in german language
 
 
 ## German books websites:
-* `Daniel` [Thalia](https://www.thalia.de/) [GitHub Repository]()
+* `Daniel`  [GitHub Repository]()
+  *  [Thalia](https://www.thalia.de/) 
 * `Mouna SKANDER` [GitHub Repository](https://github.com/SkanderMouna/GermanBooksScrapersDeepLearning.git)
   *  [Kulturkaufhaus](https://www.kulturkaufhaus.de/en/start) 
   *  [Perlentaucher](https://www.perlentaucher.de/)
