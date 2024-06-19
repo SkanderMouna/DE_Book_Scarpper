@@ -1,0 +1,16 @@
+Liebesromane;https://www.buecher.de/rubrik/buecher/liebesromane/0145/
+Sachbuch;https://www.buecher.de/rubrik/buecher/sachbuch/0121/
+Freizeit;https://www.buecher.de/rubrik/buecher/hobby--freizeit/0111/
+Biografien;https://www.buecher.de/rubrik/buecher/biografien--erinnerungen/0127/
+Fantasy;https://www.buecher.de/rubrik/buecher/science-fiction-fantasy-horror/0122/
+Kochen-Backen;https://www.buecher.de/rubrik/buecher/kochen--backen/0105/
+Krimi;https://www.buecher.de/rubrik/buecher/krimi--thriller/0114/
+Comics;https://www.buecher.de/rubrik/buecher/comics--mangas/0140/
+Bauen;https://www.buecher.de/rubrik/buecher/bauen-einrichten-heimwerken/0101/
+Biographie;https://www.buecher.de/rubrik/buecher/biografien--erinnerungen/0127/
+Karriere;https://www.buecher.de/rubrik/buecher/geld-beruf-karriere/0107/
+Gesellschafts;https://www.buecher.de/rubrik/buecher/gesellschaft--geschichte/0109/
+Gesund;https://www.buecher.de/rubrik/buecher/gesund-fit--schoen/0110/
+Grossdruckbuecher;https://www.buecher.de/rubrik/buecher/grossdruckbuecher/0139/
+Kunst;https://www.buecher.de/rubrik/buecher/kunst/0115/
+Sport;https://www.buecher.de/rubrik/buecher/sport/0123/
