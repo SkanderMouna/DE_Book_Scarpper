@@ -7,7 +7,6 @@ Note: all object content should be in german language
 "Titel": "book title",
 "Beschreibung":"long description of the book";
 "Autor":["ich bin den Author","Author 2"], //as an array
-"Rezension":"reviews",
 "Img":["cover image url","second image url"],
 "ISBN":"",
 "Produktart":"Taschenbuch"||"Gebunden",
@@ -17,6 +16,8 @@ Note: all object content should be in german language
 "Auflage":"the version of the book",
 }
 ```
+
+
 
 
 ## German books websites:
