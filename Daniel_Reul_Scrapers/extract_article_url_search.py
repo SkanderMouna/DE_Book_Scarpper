@@ -22,7 +22,7 @@ from scraper_helper import declineCookies, downloadImage, dragonMsg, extract, lo
 parser = argparse.ArgumentParser(
                     prog='Search article or category Extracter',
                     description='This script extracts from an thalia category url or an thalia search url all articles that show up to an upperbound\n\nThe default without args values scrape a example page.  \n\nif the out_file is in a Folder the folders must exists',
-                    epilog='Help End')
+                    epilog='an example would be \n>>>python extract_article_url_search.py -u https://www.thalia.de/suche?sq=zelda -o path_to_out_file_zelda')
 
 parser.add_argument('-u', '--url',default="https://www.thalia.de/suche?sq=anime%2C+horror" )      # option that takes a value
 parser.add_argument('-o', '--out_file',default='default')
@@ -90,7 +90,7 @@ return    [...new Set(all_links)].join("\n")
         file.write(cat_urls)
     
     browser.close()
-    sleep(10)
+    # sleep(10)
     dragonMsg()
     print("finshed succesfully\n")  
     
