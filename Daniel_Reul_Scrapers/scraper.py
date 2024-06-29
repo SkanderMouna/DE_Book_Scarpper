@@ -19,7 +19,12 @@ from scraper_helper import declineCookies, downloadImage, dragonMsg, extract, lo
 
 '''
 Example Use
-python scraper.py --urls "TestURL/sucheXsqXStarXTrek.txt" -o "DataDemonstration/star_trek.jsonl"  -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+python scraper.py --urls "TestURL/sucheXsqXpokemon.txt" -o "DataDemonstration/pokemon.jsonl"  -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+                            |                               |                                   ^~~~useragent                        
+                            |                               |                
+                            |                               ^~~~~the filename for the output jsonl !!folder must exist                     
+                            |
+                            ^~~~~The file with the \n seperate urls for article pages  relative to current position     
 '''
 
 
