@@ -1,12 +1,23 @@
 import { ArgsParse } from "./args_parsing.mjs";
 import { clamp, loadArrayJSONL } from "./helper.mjs";
+import fs from 'node:fs'
+/**
+ * writen by Daniel 
+ * this script can normalise my dataset to the agreed format
+ * it can take multible resultfiles from my scraper like
+ *      node normalise.mjs  ..\Data\feste-partys-9422.jsonl ..\Data\anime-4754.jsonl ..\ArticleData\page1.jsonl --out_file normed_auth_relaes.jsonl
+ * 
+ * it also makes some mapping
+ * and deduplicate the data
+ */
+
 
 let args = ArgsParse();
 
 let file_names = [...args];
 console.log(`\nparsed args are %o`, args);
-let out_file=args.out_file??"normed.jsonl";
-
+let out_file = args.out_file ?? "normed.jsonl";
+let restrict_probs = args.restrict_probs ?? false;
 
 let all_jsonls = loadArrayJSONL(file_names, true)
 let i = 0;
@@ -29,7 +40,13 @@ function getUniqueOnProb(collection, key) {
     }
     return all_val;
 }
-
+function Count(arr) {
+    const counts = {};
+    for (const num of arr) {
+        counts[num] = counts[num] ? counts[num] + 1 : 1;
+    }
+    return counts;
+}
 
 function allDifferentKeys(collection) {
     let all_keys = new Map();
@@ -44,28 +61,35 @@ function allDifferentKeys(collection) {
     return all_keys;
 }
 
-const allowed_categories = ['Sachbücher', 'Handwerk' , 'Schule', 'Fachbücher', 'Krimi&Thriller',
+const allowed_categories = ['Sachbücher', 'Handwerk', 'Schule', 'Fachbücher', 'Krimi&Thriller',
     'Kochen&Backen', 'Fantasy', 'Ratgeber', 'Länder&Städte', 'Romanze', 'Drama', 'Erotik',
     'Manga', 'Comic', 'Kinderbücher', 'Abenteuer', 'Jugendbücher',
     'Reisen', 'Sprachen&Lernen', 'Dokumentationen',
     'Horror', 'TV-Serien', 'NewAdult', 'Entspannung', 'Action', 'Self-Publishing',
     'Komödie', 'Klassiker', 'Biografien', 'Familie', 'Animation', 'ScienceFiction', 'Comedy&Humor',
-    'Jugendhörbücher', 'BookTok', 'Eastern', 'Western', 'Anime', 'Literaturverfilmungen', 'Märchen','Romane','Hobby',]
+    'Jugendhörbücher', 'BookTok', 'Eastern', 'Western', 'Anime', 'Literaturverfilmungen', 'Märchen', 'Romane', 'Hobby',]
 
-function determinKategory(book){
-    let cat_parts=book.Kategorien.split(/\/|,|&/);
-    book.rawKategorien=book.Kategorien;
-    book.Kategorien=[];
-    let Kategorien_set=new Set();
-    for(const cat_part of cat_parts){
-        for(const cat   of allowed_categories){
-            if(cat.includes(cat_part)){
+function determinKategory(book) {
+
+
+    let cat_parts = book.Kategorien.split(/\/|,|&/);
+
+    //for movies Genre is more accurate
+    if(book.Genre){
+        cat_parts=book.Genre.split(/\/|,|&/);
+    }
+    book.rawKategorien = book.Kategorien;
+    book.Kategorien = [];
+    let Kategorien_set = new Set();
+    for (const cat_part of cat_parts) {
+        for (const cat of allowed_categories) {
+            if (cat.includes(cat_part)) {
                 Kategorien_set.add(cat);
                 break
             }
         }
     }
-    book.Kategorien=[...Kategorien_set];
+    book.Kategorien = [...Kategorien_set];
 
 }
 function determinProductTyp(book) {
@@ -111,8 +135,9 @@ const valid_probs = Object.keys(
 function filterBook(book) {
     let filtered = {};
     for (const prob of valid_probs) {
-        filtered[prob]=book[prob];
+        filtered[prob] = book[prob];
     }
+    return filtered;
 }
 
 let all = all_jsonls.flatMap(x => x);
@@ -124,26 +149,28 @@ let map_uniqe = new Map();
 for (const book of all) {
     if (book.Titel === "") continue;
     const { Autor, Titel, Erscheinungsdatum } = book;
-    let autor_title_release = Titel + Autor[0];
+    let autor_title_release = Titel.slice(0, 10) + Autor.join() ;
     let uniq_tag = map_uniqe.get(autor_title_release);
     if (uniq_tag == undefined) {
         determinProductTyp(book);
         determinKategory(book);
         filmAutorReplacement(book);
-        let filteredbook = filterBook(book);
+        let filteredbook = restrict_probs ? filterBook(book) : book;
         normalised.push(filteredbook);
-        map_uniqe.set(autor_title_release,1);
+        map_uniqe.set(autor_title_release, 1);
     }
-    else{
-        map_uniqe.set(autor_title_release,uniq_tag+1);
+    else {
+        map_uniqe.set(autor_title_release, uniq_tag + 1);
     }
 }
 
 
-console.log("normalised length",normalised.length);
+console.log("normalised length", normalised.length);
 
+let log_dups = [...map_uniqe].filter(([key, val]) => val > 1).map(x => (x[1] + "")?.padEnd(5) + ":" + x[0]).join("\n")
 try {
-    fs.writeFileSync(out_file,normalised.map(x=>JSON.stringify(x)).join('\n') );
-  } catch (err) {
+    fs.writeFileSync(out_file, normalised.map(x => JSON.stringify(x)).join('\n'));
+    fs.writeFileSync(out_file + ".duplication.txt", "Duplication\n" + log_dups);
+} catch (err) {
     console.error(err);
-  }
+}
