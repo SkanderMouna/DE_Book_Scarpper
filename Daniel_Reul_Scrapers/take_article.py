@@ -66,7 +66,7 @@ return    [...new Set(all_urls)].join("\n")
         file.write(urls)
     
     browser.close()
-    sleep(10)
+    # sleep(10)
     dragonMsg()
     print("finshed succesfully\n")  
 take_sitemap_articles(args.out_file,args.up_to_page)

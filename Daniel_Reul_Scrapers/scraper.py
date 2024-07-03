@@ -17,6 +17,16 @@ import os
 
 from scraper_helper import declineCookies, downloadImage, dragonMsg, extract, loadURLs, save, testIsGermanBook, writeCurIndex
 
+'''
+Example Use
+python scraper.py --urls "TestURL/sucheXsqXpokemon.txt" -o "DataDemonstration/pokemon.jsonl"  -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+                            |                               |                                   ^~~~useragent                        
+                            |                               |                
+                            |                               ^~~~~the filename for the output jsonl !!folder must exist                     
+                            |
+                            ^~~~~The file with the \n seperate urls for article pages  relative to current position     
+'''
+
 
 parser = argparse.ArgumentParser(
                     prog='Scraper',
@@ -25,9 +35,11 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument('-u', '--urls',default="TestURL/Other10_Url.txt" )      # option that takes a value
 parser.add_argument('-o', '--out_file',default="DataDemonstration/Other10_UrlNext.jsonl")
+parser.add_argument('-E', '--maxError',default=0)
+parser.add_argument('-A', '--user_agent',default="default")
 
 args = parser.parse_args()
-print(f'Args: \n\turls: {args.urls} \n\tout_file: { args.out_file}')
+print(f'Args: \n\turls: {args.urls} \n\tout_file: { args.out_file}\n\t--maxError: { args.maxError}\n\t--user_agent: { args.user_agent}')
 
 
 
@@ -40,11 +52,12 @@ chrome_options = Options()
 
 chrome_options.add_argument(f"--disable-blink-features=AutomationControlled")
 # Set the custom User-Agent
-#chrome_options.add_argument(f"--user-agent={my_user_agent}")
+if args.user_agent!="default":
+    chrome_options.add_argument(f"--user-agent={args.user_agent}")
 
 
 
-def scrape(url_path:str,output_file:str):
+def scrape(url_path:str,output_file:str,max_errorCount:int=3):
     cur_url_index=0
     cur_output_index=0
     out_baseName=re.sub('.jsonl',"",output_file)
@@ -72,10 +85,11 @@ def scrape(url_path:str,output_file:str):
 
     browser:WebDriver= webdriver.Chrome(chrome_options)
     print(f"Start url is {scrape_urls[cur_url_index]}")
+    print(f"Exit with CTR-C")
     browser.get(scrape_urls[cur_url_index])
-    sleep(3)
-    declineCookies(browser)
     sleep(2)
+    declineCookies(browser)
+    sleep(1)
 
     error_counter=0
     for current_url in scrape_urls[cur_url_index:]:
@@ -110,10 +124,16 @@ def scrape(url_path:str,output_file:str):
                     downloadImage(img_url,browser, image_folder_kat+"/" +fileName)
                     # sleep(2.32+0.3*random.random()) #diable sleep for images
                     for_loop_counter+=1
+        except KeyboardInterrupt as keyInt:
+            print(f"\n\nWait shortly for clean stop or Press CTR-C again (which causes a stack trace)")
+            # browser.close()
+            return
         except:
             error_counter+=1
-            print(f"something went wrong at {current_url}-- skiped to next err_count:{error_counter}")  
-            if error_counter>40: print("abour err_count to high"); return
+            print(f"Lost Connection: something went wrong at {current_url}-- skiped to next err_count:{error_counter}")  
+            if error_counter>max_errorCount: 
+                print("abour err_count to high")
+                return
             
         cur_url_index+=1
         writeCurIndex(counterfile_path,cur_url_index)
@@ -122,6 +142,7 @@ def scrape(url_path:str,output_file:str):
     #delete the pointer to the current url file
     if os.path.exists(counterfile_path): os.remove(counterfile_path)
     dragonMsg()
-    print("finshed succesfully\n")    
-    
-scrape(args.urls,args.out_file)
+    print("finshed succesfully\n")   
+     
+
+scrape(args.urls,args.out_file,int( args.maxError))
