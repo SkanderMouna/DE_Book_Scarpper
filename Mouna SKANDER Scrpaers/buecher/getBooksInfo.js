@@ -6,14 +6,50 @@ async function wait(timeout) {
     return new Promise(resolve => setTimeout(resolve, timeout));
 }
 
-async function scrapeBookInfo(url, page, category) {
+async function scrapeBookInfo(url, page, Kategorien) {
     await page.goto(url);
-    const title = await page.$eval('[data-behavior="productTitle"]', element => element.textContent.trim());
-    const author = await page.$eval('.author', element => element.textContent.trim());
-    const description = await page.$eval('[data-behavior="productDescLong"]', element => element.textContent.trim());
-    const coverUrl = await page.$eval('.cover', element => element.getAttribute('src'));
+    await wait(10)
+    const Titel = await page.$eval('[data-behavior="productTitle"]', element => element.textContent.trim());
+    let Beschreibung = await page.$eval('[data-behavior="productDescLong"]', element => element.textContent.trim());
+    if (Beschreibung.startsWith("Produktbeschreibung")) {
+        Beschreibung = Beschreibung.slice("Produktbeschreibung".length).trim();
+    }
+    const Autor = await page.$eval('.author', element => {
+        return element.textContent.split(',').map(item => item.trim());
+    });
 
-    return { title, author, category, description, url, coverUrl };
+    const coverUrl = await page.$eval('img.cover', element => element.getAttribute('src'));
+    const Img = [coverUrl];
+    let ISBN;
+    let Erscheinungsdatum
+    let Verlag
+    let Auflage=""
+    const elementsText = await page.$$eval('.product-details-value', elements => {
+        return elements.map(element => element.innerText);
+    });
+
+    elementsText.forEach(tmp => {
+        if (tmp.includes("ISBN-13:")) {
+            ISBN = tmp.replace("ISBN-13:", "").trim();
+        }
+
+        if (tmp.includes("Erscheinungstermin:")) {
+            Erscheinungsdatum = tmp.replace("Erscheinungstermin:", "").trim();
+        }
+
+        if (tmp.includes("Verlag:")) {
+            Verlag = tmp.replace("Verlag:", "").trim();
+        }
+        if(tmp.includes("Aufl."))
+        {
+            Auflage=tmp.trim();
+        }
+    })
+
+
+    const Produktart = await page.$eval('li.type>span:nth-of-type(2)', element => element.textContent.trim());
+
+    return {Titel, Beschreibung, Autor, Img, ISBN, Produktart, Erscheinungsdatum, Kategorien, Verlag, Auflage};
 }
 
 (async () => {
@@ -50,6 +86,7 @@ async function scrapeBookInfo(url, page, category) {
                 continue;
             }
         }
+
     }
 
     await browser.close();

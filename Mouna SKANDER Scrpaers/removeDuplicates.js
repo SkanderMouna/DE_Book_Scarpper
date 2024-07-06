@@ -19,15 +19,15 @@ const saveJsonData = (filePath, data) => {
 const removeDuplicatesByTitle = (data) => {
     const seenTitles = new Set();
     return data.filter(item => {
-        const isDuplicate = seenTitles.has(item.title);
-        seenTitles.add(item.title);
+        const isDuplicate = seenTitles.has(item.Titel);
+        seenTitles.add(item.Titel);
         return !isDuplicate;
     });
 };
 
 (async () => {
     const inputFilePath = 'germanBooks.json';
-    const outputFilePath = 'germanBooks-removedDuplicates.json';
+    const outputFilePath = 'germanBooks-removed.json';
 
     try {
         // Load JSON data from the input file
