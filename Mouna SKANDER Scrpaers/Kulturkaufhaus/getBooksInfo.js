@@ -131,6 +131,7 @@ async function getInfos(page) {
             console.log(e.message);
             continue;
         }
+        if(i==5){break}
     }
 }
 

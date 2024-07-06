@@ -26,8 +26,8 @@ const removeDuplicatesByTitle = (data) => {
 };
 
 (async () => {
-    const inputFilePath = 'germanBooks.json';
-    const outputFilePath = 'germanBooks-removed.json';
+    const inputFilePath = "germanBooks.json";
+    const outputFilePath = 'germanBooks_duplicatesRemoved.json';
 
     try {
         // Load JSON data from the input file
@@ -38,6 +38,7 @@ const removeDuplicatesByTitle = (data) => {
 
         // Save the unique data to the output file
         saveJsonData(outputFilePath, uniqueData);
+        console.log(`Number of unique objects: ${uniqueData.length}`);
 
         console.log(`Duplicates removed. Cleaned data saved to ${outputFilePath}`);
     } catch (error) {
