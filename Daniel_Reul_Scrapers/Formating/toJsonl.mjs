@@ -1,5 +1,5 @@
 import { readFile, writeFile } from 'fs';
-
+import os from 'node:os';
 import { ArgsParse } from "./args_parsing.mjs";
 
 /**
@@ -33,7 +33,7 @@ const readJsonArrayFromFile = (inputFilePath) => {
 // Function to write JSONL to a file
 const writeJsonlToFile = (outputFilePath, jsonArray) => {
     return new Promise((resolve, reject) => {
-        const jsonlData = jsonArray.map(obj => JSON.stringify(obj)).join('\n');
+        const jsonlData = jsonArray.map(obj => JSON.stringify(obj)).join(os.EOL);
         writeFile(outputFilePath, jsonlData, 'utf8', (err) => {
             if (err) {
                 reject(err);
@@ -60,7 +60,7 @@ let args = ArgsParse();
 
 
 // Example usage
-const inputFilePath = args.in_file ?? "normed.json";
-const outputFilePath = args.out_file ?? 'output.jsonl';
+const inputFilePath =args.i?? args.in_file ?? args[0]?? "normed.json";
+const outputFilePath =args.o?? args.out_file ?? 'output.jsonl';
 
 transformJsonToJsonl(inputFilePath, outputFilePath);

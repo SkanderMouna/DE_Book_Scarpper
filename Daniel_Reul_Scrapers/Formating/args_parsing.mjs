@@ -25,7 +25,7 @@ export function ArgsParse(required={}, { name_args_in_count, n ,mirror=true,m} =
     let args_parsed = [];
     args.forEach((x, i) => {
         if (!prev_option) {
-            if (isOption(x)) { prev_option = x; }
+            if (isOption(x)) { prev_option = x; args_parsed[prev_option] =true;if(mirror)args_parsed[prev_option.replace(/^\s*-(-)?/, "")] = true;}
             else { args_parsed[cur++] = x; }
         }
         else {
