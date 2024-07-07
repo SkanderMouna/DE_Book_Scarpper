@@ -47,7 +47,8 @@ const writeJsonlToFile = (outputFilePath, jsonArray) => {
 // Main function to transform JSON array to JSONL
 const transformJsonToJsonl = async (inputFilePath, outputFilePath) => {
     try {
-        const jsonArray = await readJsonArrayFromFile(inputFilePath);
+        let jsonArray = await readJsonArrayFromFile(inputFilePath);
+        jsonArray=jsonArray.flatMap(x=>x).filter(x=> x.constructor.name!=="Array");
         await writeJsonlToFile(outputFilePath, jsonArray);
         console.log('Transformation successful. Output written to:', outputFilePath);
     } catch (error) {
