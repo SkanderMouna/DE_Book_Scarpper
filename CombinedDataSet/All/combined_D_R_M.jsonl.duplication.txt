@@ -1,11 +1,17 @@
 Duplication
+2    :Let's have a PARTYCorinna Wild
+2    :Kunst, Buch, KünstlerbuchPetra Paffenholz
 4    :Der fernste OrtDaniel Kehlmann
+2    :Und jetzt du.Tupoka Ogette
 2    :Die Abenteuer des Joel SpaziererMichael Köhlmeier
 2    :Die Gemeinheit der DiebeAlem Grabovac
+2    :Vom »Weißen Kreuz« zur roten Fahne (Großdruck)Max Hoelz
 2    :Der Kräuter-CoachFranz-Xaver Treml
 2    :KrusoLutz Seiler
+2    :Brief an den VaterFranz Kafka
 2    :Praxisbuch MusikunterrichtStephan Ronner
 2    :MunkJan Weiler
+2    :Was Sie nicht wissen sollen!Michael Morris
 2    :Fräulein Grüns Wohlfühl-KräuterKarina Reichl
 2    :Arbeitsbuch Mathematik Oberstufe Analysis 1. Arbeitsbuch plus Erklärfilme Klassen 10-12 oder 11-13
 2    :Der Bozen-Krimi: FamilienehreSimone Dark
@@ -13,29 +19,36 @@ Duplication
 2    :Geld und Glaube in Judentum, Christentum und Islam
 2    :Allmen und der KoiMartin Suter
 2    :Makarionissi oder Die Insel der SeligenVea Kaiser
-4    :Farm der TiereGeorge Orwell
+5    :Farm der TiereGeorge Orwell
+2    :Chakra-YogaWanda Badwal
 2    :Leere HerzenJuli Zeh
 2    :Recht und MilitärHolger Zetzsche,Stephan Weber
 3    :MagnetismusChristine Schub
 3    :Kraft- und Wärmewirtschaft in der IndustrieM. Gerbel
 2    :Weiskerns NachlassChristoph Hein
+2    :Fractal NoiseChristopher Paolini
 2    :Alle Lieder sind schon da. Liederbuch
 2    :G DATA Internet Security 3 für 1
+2    :100 Top-Fußballer - Die besten Spieler des 21. JahrhundertsJens Dreisbach
 2    :Kühn hat ÄrgerJan Weiler
 2    :Der SprungSimone Lappert
 2    :Unternehmenswachstum und ÖkologieHerbert F. Berg
 2    :KollapsJared Diamond
 2    :Eine Reise ins Innere unserer ZähneHelge-Otto Fabritius,Joachim Enax,Frederic Meyer
 2    :AuerhausBov Bjerg
-4    :Der kleine BruderSven Regener
+2    :Der kleine BruderSven Regener
+2    :Starling HouseAlix E. Harrow
 2    :Verhängnisvolle FreundschaftWerner Rügemer
 2    :Dagegen die Elefanten!Dagmar Leupold
 4    :Mode und andere NeurosenKatja Eichinger
+2    :Principles: So navigieren Sie Ihr Vermögen durch große SchuldenkrisenRay Dalio
+2    :SelleriesaftAnthony William
 2    :Der LeviathanJoseph Roth
 3    :Skalenhandbuch KommunikationswissenschaftPatrick Rössler
 2    :Buch gegen das VerschwindenUlrike Almut Sandig
 2    :CristinaEleonore Frey
 2    :Staatsaffäre Architektur
+2    :PraxisWissen FilzenMonique Rahner
 2    :Shadowrun: Neo-Asphaltdschungel (Hardcover) *Limitierte Ausgabe*
 2    :Urheberrechtsverletzungen durch Verlinkungen im InternetSandra Kaiser
 2    :Marcia aus VermontPeter Stamm
@@ -45,16 +58,20 @@ Duplication
 2    :Vampyria - Der Hof der FinsternisVictor Dixen
 2    :Sword Art Online - Novel 05Reki Kawahara
 2    :HausaufgabenJakob Arjouni
+2    :Komödien I (Großdruck)William Shakespeare
+2    :Guter Hoffnung - Hebammenwissen für Mama und BabyKareen Dannhauer
 2    :Grüne Armee FraktionWolfgang Metzner
 3    :Architektur konstruieren
 2    :Hast du uns endlich gefundenEdgar Selge
 2    :Die unvollständigen Aufzeichnungen der Tourschlampe DorisGeorg Ringsgwandl
 2    :Training Physik / Physik - Übertritt in die OberstufeBerta Wurz
+2    :Schneider - Bautabellen für Ingenieure
 2    :Am Ende bleiben die ZedernPierre Jarawan
 2    :Durchblick in OptikMax Gmelch,Sebastian Reineke
 2    :Takeshis HautLucy Fricke
 2    :Massimo MariniRolf Dobelli
 2    :CherubinoAndrea Grill
+2    :KandinskyHajo Düchting
 2    :Gestalte dein Vision BoardCandace Johnson
 2    :Anatomie einer NachtAnna Kim
 2    :Der ZauberbergThomas Mann
@@ -66,10 +83,13 @@ Duplication
 2    :Die unglaublichen Abenteuer des Barnaby BrocketJohn Boyne
 2    :Hausarbeit schreibenJohanna Degen
 2    :Der EngelsbaumLucinda Riley
+2    :Reise durch MittelerdeJohn Howe
 2    :Endspurt Klinik: Gynäkologie, Geburtshilfe
+2    :Die Hölle war der PreisHera Lind
 2    :Hinter der Hecke die WeltGianna Molinari
 2    :«Ich habe das Internet gelöscht!»Philipp Spielbusch
 3    :Die Arbeit der NachtThomas Glavinic
+2    :Aenne und ihre BrüderReinhold Beckmann
 3    :Lehr- und Arbeitsbuch Physikalische ChemieGerd Wedler,Hans-Joachim Freund
 2    :Homefarming: Das KochbuchJudith Rakers
 2    :Bildnis der Mutter als junge FrauFriedrich Christian Delius
@@ -77,20 +97,26 @@ Duplication
 2    :KönigskinderAlex Capus
 2    :Die WitwenDagmar Leupold
 2    :So, und jetzt kommst duArno Frank
+2    :Aktuelle Wirtschaftsgesetze 2024
+2    :Schnee auf dem KilimandscharoErnest Hemingway
 2    :IllegalMax Annas
 2    :Nicht wie ihrTonio Schachinger
 2    :DschinnsFatma Aydemir
+2    :Mieruko-chan - Die Geister, die mich riefen 9Tomoki Izumi
+2    :Die anderen GeschlechterDagmar Pauli
 2    :FDaniel Kehlmann
 2    :Schneewittchen muss sterbenNele Neuhaus
 2    :21 Lektionen für das 21. JahrhundertYuval Noah Harari
 2    :Lehrbuch der Quantitativen AnalyseDaniel C. Harris
+2    :Rückkehr nach ReimsDidier Eribon
 2    :Die Tochter meines VatersMareike Krügel
 2    :GlückskindSteven Uhly
-3    :Piccola SiciliaDaniel Speck
+2    :Piccola SiciliaDaniel Speck
 2    :Christentum und Populismus
 13   :Atlas - Die Geschichte von Pa SaltLucinda Riley,Harry Whittaker
 2    :Architektur als soziales Handeln
 2    :Groschens GrabFranzobel
+2    :Die Singuläre FrauKatja Kullmann
 2    :Das Papa-HandbuchRobert Richter,Eberhard Schäfer
 2    :Taschenlehrbuch Biologie: ZoologieKatharina Munk
 2    :HomefarmingJudith Rakers
@@ -101,6 +127,10 @@ Duplication
 2    :Zauber der StilleFlorian Illies
 2    :Gesammelte Werke: Historische Romane, Biografien und KrimisAlfred Schirokauer
 2    :Der Lärm des LebensJörg Hartmann
+2    :Der Tätowierer von AuschwitzHeather Morris
+2    :Der Buchladen am Ende der WeltRuth Shaw
+2    :Making It SoPatrick Stewart
+2    :The Woman in MeBritney Spears
 2    :Die Kunst des Zeichnens Comic Cartoonfrechverlag
 2    :Fantasy-Geschichten für KidsHans-Peter Tiemann
 3    :Fangirl FantasyOlivia Vieweg
@@ -110,9 +140,11 @@ Duplication
 2    :Poor EconomicsAbhijit V. Banerjee,Esther Duflo
 2    :Sketching from the Imagination: Manga & Anime3dtotal Publishing
 2    :Die Kräuter in meinem GartenSiegrid Hirsch,Felix Grünberger
-2    :Ein Garten über der ElbeMarion Lagoda
+3    :Ein Garten über der ElbeMarion Lagoda
 2    :Der Garten der LiebeKhalil Gibran
+2    :Im Garten der PusteblumenNoelia Blanco
 2    :Wissen. Natur & TechnikAbigail Beall,Jack Challoner,Derek Harvey
+2    :Die geleugnete NaturAbigail Favale
 2    :Natur und Technik 7: Physik Gymnasium BayernRainer Dietrich,Christian Fauser,Stephan Feuerpfeil,Robert Jäger,Rüdiger Janner
 2    :Woodwalkers - Die Rückkehr (Staffel 2, Band 5). Rivalen im RevierKatja Brandis
 2    :Percy Jackson 6: Der Kelch der GötterRick Riordan
@@ -136,7 +168,7 @@ Duplication
 33   :Malen nach Zahlen MangaSchwager & Steinlein Verlag
 33   :Manga Chibi - Zeichenkurs Niedliche TierePhoebe Im
 33   :MangaBen Krefta
-10   :Manga-Malbuch
+11   :Manga-Malbuch
 10   :Deadpool Samurai (Manga) 02Sanhiro Kasama,Hikaru Uesugi
 10   :MangaTim Seelig,Yishan Li,Rik Nicol
 10   :100 Manga-Figuren zeichnenChristopher Hart
@@ -309,6 +341,7 @@ Duplication
 2    :Philosophie der symbolischen FormenErnst Cassirer
 3    :Philosophie des GeldesGeorg Simmel
 2    :Technik im MittelalterMarcus Popplow
+2    :Alexander-TechnikRenate Wehner
 2    :Das war Kunst, jetzt ist es wegCora Wucherer
 2    :Die Kunst des LeidensKristof Ramon
 2    :Architektur in 30 SekundenEdward Denison,Jonathan Glancey
@@ -321,11 +354,25 @@ Duplication
 2    :Dune: Part TwoFrank Herbert,Jon Spaihts,Denis Villeneuve
 2    :BarbieNoah Baumbach,Greta Gerwig
 2    :Bob Marley: One LoveTerence Winter,Frank E. Flowers,Zach Baylin,Reinaldo Marcus Green
+2    :Chainsaw Man 16Tatsuki Fujimoto
+2    :Jujutsu Kaisen - Band 23Gege Akutami
+2    :Spy x Family - Band 11Tatsuya Endo
+2    :More than a Doll 12Shinichi Fukuda
+2    :Haikyu!! - Band 42Haruichi Furudate
+2    :You're My Cutie! 05Nakaba Harufuji
+2    :Kaiju No. 8 - Band 10 mit DekoramaNaoya Matsumoto
+2    :Kaiju No. 8 - Band 7Naoya Matsumoto
+2    :ColumbusstraßeTobi Dahmen
+2    :Kaiju No. 8 - Band 8Naoya Matsumoto
+2    :Kaiju No. 8 - Band 9Naoya Matsumoto
+2    :Kaiju No. 8 - Band 6Naoya Matsumoto
+2    :Blue Exorcist - Band 29Kazue Kato
 2    :Studienführer JuraRonja Serena Ringelstein,Ronja S. Spießer
 5    :Das große Tafelwerk interaktiv 2.0 Mathematik, Informatik, Astronomie, Physik, Chemie, Biologie. Schülerbuch. Allgemeine Ausgabe außer Niedersachsen und BayernAndreas Gramm,Wolfgang Kricke,Hubert König,Karlheinz Martin,Lothar Meyer
 5    :Formelsammlung bis zum Abitur - Mathematik - Physik - Astronomie - Chemie - Biologie - InformatikFrank-Michael Becker,Lutz Engelmann,Christine Ernst,Günter Fanghänel,Heinz Höhne
 2    :Physik biologischer SystemeSiegfried Kiontke
 4    :Paket KLB Biologie, Chemie, PhysikThomas Wenisch
+2    :Gesetze für die Soziale Arbeit
 2    :ArbeitThorsten Nagelschmidt
 2    :Arbeit und StrukturWolfgang Herrndorf
 4    :Arbeit - Bewegung - Geschichte
@@ -441,6 +488,8 @@ Duplication
 2    :Der schöne OrtTankred Dorst
 2    :Gemeinsam wohnenRebecca Niederhauser
 2    :Wohnen
+2    :Wohnen und Leben in OrdnungLilly Koslowsky
+2    :Wo die wilden Frauen wohnenAnne Siegel
 2    :Popkultur 2.0
 2    :Superspreader - Popkultur und mediale Diskurse im Angesicht der Pandemie
 2    :Popkultur und Populismen
@@ -524,6 +573,7 @@ Duplication
 2    :Gentechnik und die Nahrungsmittelindustrie
 2    :Grüne GentechnikX. Huber
 2    :Elementare Musiklehre und Grundlagen der HarmonielehreChristian Nowak
+2    :Grundlagen - SGB II: Bürgergeld, Grundsicherung für ArbeitsuchendeThomas Knoche
 2    :Wiley-Schnellkurs Organische Chemie I GrundlagenDavid R. Klein
 2    :Spirituelle Ökologie
 2    :ÖkologieMichael Begon,Robert W. Howarth,Colin R. Townsend
@@ -735,7 +785,10 @@ Duplication
 2    :Anästhesie und Intensivmedizin Prüfungswissen für die FachpflegeReinhard Larsen
 2    :Mehr Komplikationen in der Anästhesie
 3    :Anästhesie und IntensivmedizinReinhard Larsen
+2    :Krafttraining - Die Anatomie verstehenAustin Current
 2    :Handbuch Anatomie
+2    :Anatomie, Gymnastizierung, MuskelaufbauGillian Higgins
+2    :Anatomie verstehen - besser reitenGillian Higgins
 2    :ArbeitsmedizinXaver Baur
 2    :Basiswissen Arbeitsmedizin
 2    :ELSEVIER ESSENTIALS ArbeitsmedizinDennis Nowak,Uta Ochmann
@@ -1169,10 +1222,10 @@ Duplication
 4    :Fourth Wing - FlammengeküsstRebecca Yarros
 2    :Court of Ice and Ash - Geliebt von meinem FeindLJ Andrews
 2    :OZ - Ein Fantasy-SpielbuchJonathan Green
-2    :Throne of the Fallen - VerführtKerri Maniscalco
+3    :Throne of the Fallen - VerführtKerri Maniscalco
 2    :VooDoo - Gefährliche Lust | Erotischer Fantasy RomanCarol Stroke
 2    :Geile Spiele im höllischen Swingerclub | Erotischer Fantasy-RomanDoris E. M. Bulenda
-2    :Miss Moons höchst geheimer Club für ungewöhnliche HexenSangu Mandanna
+3    :Miss Moons höchst geheimer Club für ungewöhnliche HexenSangu Mandanna
 2    :Die Wortweberin - Schall und ScheinElvira Zeißler
 2    :Die Erwählung der jungen Sklavin | Erotischer Fantasy-RomanJohanna Söllner
 2    :Onyx Storm - FlammengeküsstRebecca Yarros
@@ -1189,6 +1242,7 @@ Duplication
 2    :Vampire Academy - BlutsschwesternRichelle Mead
 2    :WiccaCreed (Wicca Creed) | Rache & FeuerMarah Woolf
 2    :Once Upon a Broken HeartStephanie Garber
+2    :DreamcatcherJuliane Maibach
 2    :Skulduggery Pleasant (Band 13) - UntotenlandDerek Landy
 2    :Percy Jackson 01. Diebe im OlympRick Riordan
 2    :Percy Jackson 02. Im Bann des ZyklopenRick Riordan
@@ -1218,8 +1272,11 @@ Duplication
 3    :Der im Irr-Garten der Liebe herum taumelnde CavalierJohann Gottfried Schnabel
 2    :Die Wunderwelt der KräuterStefanie Hertel
 2    :Kräuter
+2    :Kräuter-RezeptbuchSiegrid Hirsch
+2    :Kräuter-WirkstoffeSigrid Thaler Rizzolli
 2    :Essbare Kräuter und WildpflanzenLarena Lambert
 2    :Tiere denkenRichard David Precht
+2    :Farm der Tiere / Animal FarmGeorge Orwell
 2    :Gärtnern mit PilzenJeff Lowenfels
 2    :Einfach gärtnern! Naturnah und nachhaltigHorst Mager
 2    :Ökologisch gärtnern mit Mischkultur.Hans Wagner
@@ -1240,6 +1297,8 @@ Duplication
 2    :Manga und Manhwa. Japanische und koreanische Comics im VergleichNini Lovevalley
 2    :Unintentional Love Story 3PIBI
 2    :Unintentional Love Story 4PIBI
+2    :Lustiges Taschenbuch Abenteuer 08Disney
+2    :Handbuch Sanieren und ModernisierenPeter Burk
 2    :Orange 7Ichigo Takano
 2    :Orange 6Ichigo Takano
 2    :Orange 4Ichigo Takano
@@ -1273,87 +1332,3 @@ Duplication
 2    :Engel oder Außerirdische?Xavier X. Burrows
 2    :Entführt durch AußerirdischeHerold zu Moschdehner
 2    :Die Außerirdische (AlienWalk 1)Jens F. Simon
-3    :KairosJenny Erpenbeck
-2    :22 BahnenCaroline Wahl
-2    :Zeit zu verzeihenHera Lind
-141  :Windstärke 17Caroline Wahl
-2    :Stay away from Gretchen / Gretchen Bd.1Susanne Abel
-2    :Eine Frage der ChemieBonnie Garmus
-2    :Iron Flame / Flammengeküsst Bd.2Rebecca Yarros
-3    :Der TrafikantRobert Seethaler
-2    :Junge Frau, am Fenster stehend, Abendlicht, blaues KleidAlena Schröder
-2    :Was man von hier aus sehen kannMariana Leky
-2    :LichtungenIris Wolff
-2    :Die Herrlichkeit des LebensMichael Kumpfmüller
-2    :LanzFlurin Jecker
-2    :Unter der DrachenwandArno Geiger
-3    :Ein ganzes LebenRobert Seethaler
-3    :Irgendwann werden wir uns alles erzählenDaniela Krien
-2    :Alte LiebeElke Heidenreich
-3    :Die HerrenausstatterinMariana Leky
-2    :LückenlebenKatrin Seyfert
-2    :Marseille 1940Uwe Wittstock
-2    :Feindliche ÜbernahmeThilo Sarrazin
-2    :Das geheime Leben der BäumePeter Wohlleben
-2    :Vom Zauber des UntergangsGabriel Zuchtriegel
-140  :9mm CutSybille Ruge
-140  :Schiff aus SteinKarl-Markus Gauß
-140  :Vorabbericht in Sachen der Zona CesariniKurt Lanthaler
-140  :Die Möglichkeit eines WundersJan Schomburg
-140  :Sei nicht soKristin Warnke
-140  :Das Weltgebäude muss errichtet werden. Man will ja irgendwo wohnenAngela Krauß
-139  :Das Jahr der VeränderungenTessa Hadley
-139  :GegenlichtPirkko Saisio
-139  :Zebras im SchneeFlorian Wacker
-139  :Fortwährender Versuch, mit Gewalten zu lebenVolker Braun
-139  :Wie Inseln im LichtFranziska Gänsler
-139  :Die YachtAnna Katharina Fröhlich
-139  :Und alle so stillMareike Fallwickl
-2    :NachtfrauenMaja Haderlap
-2    :SimelibergMichael Fehr
-2    :Samuels BuchSamuel Finzi
-2    :Zur SeeDörte Hansen
-2    :Schimmernder Dunst über CobyCountyLeif Randt
-2    :Wir waren wie BrüderDaniel Schulz
-2    :IndigoClemens J. Setz
-2    :Das Dämmern der WeltWerner Herzog
-2    :DeadlineBov Bjerg
-2    :ElbwärtsThilo Krause
-2    :Palast der MiserablenAbbas Khider
-2    :Der goldene HandschuhHeinz Strunk
-2    :Das Flimmern der Wahrheit über der WüstePhilipp Schwenke
-2    :Quality LandMarc-Uwe Kling
-3    :AusterlitzW. G. Sebald
-2    :Brüder und SchwesternBirk Meinhardt
-2    :Vor dem FestSasa Stanisic
-2    :Kühn hat zu tunJan Weiler
-2    :DoitschaAdriana Altaras
-2    :BrennerovaWolf Haas
-2    :SchluckspechtPeter Wawerzinek
-2    :AugustChrista Wolf
-2    :Tag der geschlossenen TürRocko Schamoni
-2    :MittelreichJosef Bierbichler
-2    :Das Labyrinth der Träumenden BücherWalter Moers
-2    :Der Intendant kommtRainer Wieczorek
-2    :Hotel AngstJohn von Düffel
-2    :Das war ich nichtKristof Magnusson
-2    :LoslabernRainald Goetz
-2    :Oktober und wer wir selbst sindPeter Kurzeck
-2    :In PlüschgewitternWolfgang Herrndorf
-2    :Ein schönes LebenMartin Becker
-2    :Zwei oder drei Jahre späterRor Wolf
-2    :Alles umsonstWalter Kempowski
-2    :Als hätte die Stille TürenUrs Faes
-2    :Ich und KaminskiDaniel Kehlmann
-2    :Die Vermessung der WeltDaniel Kehlmann
-2    :Kleine LichterRoger Willemsen
-2    :ParlandoBodo Kirchhoff
-2    :HannahArmin Mueller-Stahl
-2    :Letzte GrüßeWalter Kempowski
-2    :Paradiese, ÜberseeFelicitas Hoppe
-2    :Tod eines KritikersMartin Walser
-2    :Im KrebsgangGünter Grass
-2    :Rudernde HundeElke Heidenreich
-2    :Das AquariumThommie Bayer
-2    :muttersterbenMichael Lentz
-2    :Wilde Reise durch die NachtWalter Moers

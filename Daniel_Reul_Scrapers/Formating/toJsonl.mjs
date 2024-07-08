@@ -7,6 +7,9 @@ import { ArgsParse } from "./args_parsing.mjs";
  *Converts a JSON array file  ( [{...},{...},...]  ) to a jsonl file   ( {...}\n{...}\n{...}  )  
  * node toJsonl.mjs --inputFilePath "in path"  --outputFilePath "out path"
  *
+ * 
+ * other exampl
+ * node toJsonl.mjs -i "..\..\Mouna SKANDER Scrpaers\MounasGermanBooks.json"  -o mouna_8_7_evening.jsonl   
  */
 
 // Function to read JSON array from a file
@@ -49,6 +52,11 @@ const transformJsonToJsonl = async (inputFilePath, outputFilePath) => {
     try {
         let jsonArray = await readJsonArrayFromFile(inputFilePath);
         jsonArray=jsonArray.flatMap(x=>x).filter(x=> x.constructor.name!=="Array");
+        for(const book of jsonArray){
+            if(typeof book.Autor=== "string"){
+                book.Autor=[book.Autor];
+            }
+        }
         await writeJsonlToFile(outputFilePath, jsonArray);
         console.log('Transformation successful. Output written to:', outputFilePath);
     } catch (error) {
