@@ -8,7 +8,7 @@ async function wait(timeout) {
 
 async function scrapeBookInfo(url, page, Kategorien) {
     await page.goto(url);
-    await wait(10)
+    await wait(1000)
     const Titel = await page.$eval('[data-behavior="productTitle"]', element => element.textContent.trim());
     let Beschreibung = await page.$eval('[data-behavior="productDescLong"]', element => element.textContent.trim());
     if (Beschreibung.startsWith("Produktbeschreibung")) {
@@ -71,7 +71,7 @@ async function scrapeBookInfo(url, page, Kategorien) {
     // Read URLs and categories from the file
     const lines = fs.readFileSync(urlsFilePath, 'utf8').split('\n').filter(line => line.trim() !== '');
 
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 4987; i < lines.length; i++) {
         const [category, url] = lines[i].split(';').map(part => part.trim());
         if (url) {
             try {
