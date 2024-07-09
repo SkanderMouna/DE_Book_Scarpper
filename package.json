@@ -1,0 +1,16 @@
+{
+  "name": "de_book_scarpper",
+  "version": "1.0.0",
+  "description": "For our dataset we going to use JSON files following this structure below. Note: all object content should be in german language ## Book Object Structure ```bash { \"title\": \"book title\", \"description\":\"long description of the book\"; \"author\":[\"ich bin den Author\",\"Author 2\"], //as an array \"review\":\"reviews\", \"imagesUrls\":[\"cover image url\",\"second image url\"], \"ISPN\":\"\", \"bookType\":\"Taschenbuch\"||\"Gebunden\", \"release\":\"05.05.2022\", \"category\": [\"fantasy\"] \"\" } ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.30.1",
+    "puppeteer": "^22.11.2"
+  }
+}

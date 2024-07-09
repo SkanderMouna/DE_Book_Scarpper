@@ -1,9 +1,10 @@
 import fs from 'node:fs';
-
+import os from 'node:os';
 export function loadJSONL(file) {
 
-    let text = fs.readFileSync(file, 'utf8');
-    text = text.split('\r\n');
+    let fiel_text = fs.readFileSync(file, 'utf8');
+    let text = fiel_text.split(os.EOL);
+    
     let jsonl_arr = text.map(json => { try { return JSON.parse(json) } catch (e) { } }).filter(x => x);
     return jsonl_arr;
 }

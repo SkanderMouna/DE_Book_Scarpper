@@ -1,14 +1,20 @@
 import { ArgsParse } from "./args_parsing.mjs";
 import { clamp, loadArrayJSONL } from "./helper.mjs";
 import fs from 'node:fs'
+import os from "node:os";
+import { valid_probs } from "./valid_probs.mjs";
 /**
  * writen by Daniel 
  * this script can normalise my dataset to the agreed format
  * it can take multible resultfiles from my scraper like
- *      node normalise.mjs  ..\Data\feste-partys-9422.jsonl ..\Data\anime-4754.jsonl ..\ArticleData\page1.jsonl --out_file normed_auth_relaes.jsonl
+ *      node normalise.mjs  ..\Data\feste-partys-9422.jsonl ..\Data\anime-4754.jsonl ..\ArticleData\page1.jsonl --out_file normed_auth_relaes.jsonl  [ -TS 30    --restrict_probs true]
+ *                                                                                                              |                                     |            ^~~(or -r )  only use probs that are in valid props    
+ *                                                                                                              ^~~~(or -o)  in which file to write   ^~~~use only 30 chars of Title 
  * 
  * it also makes some mapping
  * and deduplicate the data
+ * -the TitleSlice  is good to filter out movies that appeare as DVDS and Blurays for my Data Set can be disabled
+ * -
  */
 
 
@@ -16,8 +22,10 @@ let args = ArgsParse();
 
 let file_names = [...args];
 console.log(`\nparsed args are %o`, args);
-let out_file = args.out_file ?? "normed.jsonl";
-let restrict_probs = args.restrict_probs ?? false;
+let out_file =args.o?? args.out_file ?? "normed.jsonl";
+let  do_title_sl= args.TS ??args.title_slice ?? undefined;
+let restrict_probs =args.r?? args.restrict_probs ?? false;
+let isbnNoHypen=args.ISBNnH??args.isbn_no_hyphon??false;
 
 let all_jsonls = loadArrayJSONL(file_names, true)
 let i = 0;
@@ -98,7 +106,11 @@ function determinProductTyp(book) {
     if (/Gebund/i.test(book.Einband)) { return book[key] = "Gebundenes Buch" }
     let typ = book.ExtraInfo;
 
-    if (typ == undefined || typ === "") { book[key] = ""; return }
+    //use 'Medium' for Films 
+    if (typ == undefined || typ === "") { 
+        typ = book.Medium;
+        // book[key] = ""; return 
+    }
     if (/Taschenbuch/i.test(typ)) { return book[key] = "Taschenbuch" }
     if (/Gebunde/i.test(typ)) { return book[key] = "Gebundenes Buch" }
     if (/Hörbuch/i.test(typ)) { return book[key] = "Hörbuch" }
@@ -118,21 +130,8 @@ function filmAutorReplacement(book) {
         book.Autor = [book.Regisseur];
     }
 }
-const valid_probs = Object.keys(
-    {
-        "Titel": "book title",
-        "Beschreibung": "long description of the book",
-        "Autor": ["ich bin den Author", "Author 2"], //as an array
-        "Img": ["cover image url", "second image url"],
-        "ISBN": "",
-        "Produktart": "Taschenbuch" || "Gebunden",
-        "Erscheinungsdatum": "05.05.2022",
-        "Kategorien": ["fantasy"],
-        "Verlag": "the publisher",
-        "Auflage": "the version of the book",
-    }
-);
-function filterBook(book) {
+
+function filterOnlyValidProps(book) {
     let filtered = {};
     for (const prob of valid_probs) {
         filtered[prob] = book[prob];
@@ -149,13 +148,16 @@ let map_uniqe = new Map();
 for (const book of all) {
     if (book.Titel === "") continue;
     const { Autor, Titel, Erscheinungsdatum } = book;
-    let autor_title_release = Titel.slice(0, 10) + Autor.join() ;
+    
+    let tilte_sl=do_title_sl? Titel.slice(0,do_title_sl ):Titel;
+    let autor_title_release = tilte_sl + Autor.join() ;
     let uniq_tag = map_uniqe.get(autor_title_release);
     if (uniq_tag == undefined) {
         determinProductTyp(book);
+        if(isbnNoHypen&&book.ISBN) {book.ISBN=book.ISBN.replaceAll('-',"");}
         determinKategory(book);
         filmAutorReplacement(book);
-        let filteredbook = restrict_probs ? filterBook(book) : book;
+        let filteredbook = restrict_probs ? filterOnlyValidProps(book) : book;
         normalised.push(filteredbook);
         map_uniqe.set(autor_title_release, 1);
     }
@@ -167,9 +169,9 @@ for (const book of all) {
 
 console.log("normalised length", normalised.length);
 
-let log_dups = [...map_uniqe].filter(([key, val]) => val > 1).map(x => (x[1] + "")?.padEnd(5) + ":" + x[0]).join("\n")
+let log_dups = [...map_uniqe].filter(([key, val]) => val > 1).map(x => (x[1] + "")?.padEnd(5) + ":" + x[0]).join(os.EOL)
 try {
-    fs.writeFileSync(out_file, normalised.map(x => JSON.stringify(x)).join('\n'));
+    fs.writeFileSync(out_file, normalised.map(x => JSON.stringify(x)).join(os.EOL));
     fs.writeFileSync(out_file + ".duplication.txt", "Duplication\n" + log_dups);
 } catch (err) {
     console.error(err);

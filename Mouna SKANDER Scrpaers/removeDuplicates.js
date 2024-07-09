@@ -19,15 +19,15 @@ const saveJsonData = (filePath, data) => {
 const removeDuplicatesByTitle = (data) => {
     const seenTitles = new Set();
     return data.filter(item => {
-        const isDuplicate = seenTitles.has(item.title);
-        seenTitles.add(item.title);
+        const isDuplicate = seenTitles.has(item.Titel);
+        seenTitles.add(item.Titel);
         return !isDuplicate;
     });
 };
 
 (async () => {
-    const inputFilePath = 'germanBooks.json';
-    const outputFilePath = 'germanBooks-removedDuplicates.json';
+    const inputFilePath = "germanBooks.json";
+    const outputFilePath = 'germanBooks_duplicatesRemoved.json';
 
     try {
         // Load JSON data from the input file
@@ -38,6 +38,7 @@ const removeDuplicatesByTitle = (data) => {
 
         // Save the unique data to the output file
         saveJsonData(outputFilePath, uniqueData);
+        console.log(`Number of unique objects: ${uniqueData.length}`);
 
         console.log(`Duplicates removed. Cleaned data saved to ${outputFilePath}`);
     } catch (error) {
