@@ -259,7 +259,7 @@ def process_category_batch(driver, category, start_index, last_scraped_url, temp
     books_scraped = 0
     progress = load_progress()
     page = 1
-    while books_scraped < 50:
+    while books_scraped < 70:
         book_urls = extract_book_urls_from_search(category, driver, page)
         if not book_urls:
             break  # No more books found
