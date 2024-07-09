@@ -1,5 +1,8 @@
 ### Daniels Scraper
 
+# My final dataset is located in "Formating/danielBooks.jsonl" (the "danielBooksRestrictedProps.jsonl" has all extra props thrown out)
+
+
 # Scraper
 
 
