@@ -7,12 +7,12 @@ import { valid_probs } from "./valid_probs.mjs";
  * writen by Daniel 
  * this script can combine multiple jsonl together
  * i
- *      node combine.mjs    danielBooks.jsonl  ..\..\Rassul_Chsheriyazdanov_Scrapers\Data\all_books_normalized.json "mouna.jsonl"     -o combined_D_R_M.jsonl
+ *      node combine.mjs    danielBooks.jsonl  ..\..\Rassul_Chsheriyazdanov_Scrapers\Data\all_books_normalized1.json "mouna.jsonl"     -o combined_D_R_M.jsonl
  * 
  * it also deduplicate the data
  * 
  * 
- * to put it in Combined: node combine.mjs    danielBooks.jsonl  ..\..\Rassul_Chsheriyazdanov_Scrapers\Data\all_books_normalized.json "mouna.jsonl"     -o ..\..\CombinedDataSet\All\combined_D_R_M.jsonl
+ * to put it in Combined: node combine.mjs    danielBooks.jsonl  ..\..\Rassul_Chsheriyazdanov_Scrapers\Data\all_books_normalized1.json "mouna_final.jsonl"     -o ..\..\CombinedDataSet\All\combined_D_R_M.jsonl
  */
 
 
