@@ -10,6 +10,7 @@ import { ArgsParse } from "./args_parsing.mjs";
  * 
  * other exampl
  * node toJsonl.mjs -i "..\..\Mouna SKANDER Scrpaers\MounasGermanBooks.json"  -o mouna_8_7_evening.jsonl   
+ * node toJsonl.mjs -i "..\..\Mouna SKANDER Scrpaers\MounasGermanBooks.json"  -o mouna_final.jsonl   
  */
 
 // Function to read JSON array from a file

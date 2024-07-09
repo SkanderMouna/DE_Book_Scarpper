@@ -48,6 +48,12 @@ I have four python scripts for my scraping (they are all in this current folder)
 	And it stores a pointer to the last visited url and saves it in a file. If it detect such a pointer it tries to continue where it stopped.
 	(from experience I can say that once it starts it has no Bot Detection Problem and can run multiple hours, but  after the 3-5 restart on the same url with same user-agent it may stop working you need to change the useragent)
 
+The bulk of my scraped data comes from starting to scrape all article pages. It's stores in "ArticleData". 
+But I only visited 21971 different article pages and detected ~14000 (no deduplication) from a total of 50000 from 
+article page 1. It could be scraped more, I already have 250000 artcle pages in "ArticleUrl/pages1-4.txt", and they can be combined 
+with one of my combination script.
+The images are still in my old repo(link in global readme), I didn't copy them to save space.
+
 
 # Formating & Visualisation  
 In the folder "Formating" are javascript node.js console scripts to format/combine our data.
