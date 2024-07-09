@@ -4,7 +4,7 @@ const path = require('path');
 const mergeJsonFilesAndCountObjects = async () => {
     try {
         const file1Path = path.join(__dirname, './ScrapedBooks/booksInfo-buecher.json');
-        const file2Path = path.join(__dirname, './ScrapedBooks/booksInfo-kulturkauhaus.json');
+        const file2Path = path.join(__dirname, './ScrapedBooks/booksInfo-kulturkauhaus-flatten.json');
         const file3Path = path.join(__dirname, './ScrapedBooks/booksInfo-perlentaucher.json');
         const file1Data = JSON.parse(fs.readFileSync(file1Path, 'utf8'));
         const file2Data = JSON.parse(fs.readFileSync(file2Path, 'utf8'));
