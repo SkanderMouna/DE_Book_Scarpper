@@ -35,6 +35,7 @@ Note: all object content should be in german language
   *  [Kulturkaufhaus](https://www.kulturkaufhaus.de/en/start) 
   *  [Perlentaucher](https://www.perlentaucher.de/)
   *  [Bücher](https://www.buecher.de/)
+  From each website, a JSON file will be saved, and the final scraped data file is named ll.json, in which I have fused all the scraped data and made some cleaning and modifications.
 * `Rassul` [GitHub Repository]()
   *  [Hugendubel](https://www.hugendubel.de/de/) 
 

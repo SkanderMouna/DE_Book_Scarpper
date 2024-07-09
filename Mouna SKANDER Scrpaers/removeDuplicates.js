@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-// Load JSON data from a file
 const loadJsonData = (filePath) => {
     if (fs.existsSync(filePath)) {
         const data = fs.readFileSync(filePath, 'utf8');
@@ -10,12 +9,16 @@ const loadJsonData = (filePath) => {
     }
 };
 
-// Save JSON data to a file
 const saveJsonData = (filePath, data) => {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 };
 
-// Remove duplicates by title
+/**
+ * Remove duplicated based on the title : duplicates are due to when scraping data somtimes it crashes because of internet
+ * and I had to restart the script from the last book index it stopped at
+ * @param data
+ * @returns {*}
+ */
 const removeDuplicatesByTitle = (data) => {
     const seenTitles = new Set();
     return data.filter(item => {
@@ -30,13 +33,8 @@ const removeDuplicatesByTitle = (data) => {
     const outputFilePath = 'germanBooks_duplicatesRemoved.json';
 
     try {
-        // Load JSON data from the input file
         const data = loadJsonData(inputFilePath);
-
-        // Remove duplicates by title
         const uniqueData = removeDuplicatesByTitle(data);
-
-        // Save the unique data to the output file
         saveJsonData(outputFilePath, uniqueData);
         console.log(`Number of unique objects: ${uniqueData.length}`);
 
