@@ -54,6 +54,6 @@ function processJson(inputFile, outputFile) {
 }
 
 const inputFile = 'germanBooks_duplicatesRemoved.json';
-const outputFile = 'germanBooks_normelizedData.json';
+const outputFile = 'germanBooks_normelizedDate.json';
 
 processJson(inputFile, outputFile);
