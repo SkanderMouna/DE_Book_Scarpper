@@ -39,7 +39,7 @@ function processJson(inputFile, outputFile) {
     });
 }
 
-const inputFile = "germanBooks_normelizedData.json";
+const inputFile = "germanBooks_normelizedDate.json";
 const outputFile = 'MounasGermanBooks.json';
 
 processJson(inputFile, outputFile);
