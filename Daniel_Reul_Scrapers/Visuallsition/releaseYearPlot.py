@@ -16,7 +16,7 @@ Can take any jsonl
 no -t ->  -t release ->realese years
 Cause it only uses the year it also works with Mounas occasionnly "Juil 2021" Date Format
 
-python releaseYearPlot.py -i ..\..\CombinedDataSet\All\combined_D_R_M.jsonl --since 1970
+python releaseYearPlot.py -i ..\..\CombinedDataSet\All\combined_D_R_M.jsonl --since 1990
 
 -t category  -> By Categories
 
@@ -24,10 +24,10 @@ python releaseYearPlot.py -i ..\..\CombinedDataSet\All\combined_D_R_M.jsonl --si
 python releaseYearPlot.py  -t category --title " (Thalia)"  --includeNo True  -i  ..\Formating\danielBooks.jsonl
 
 #Plot Rassul (@Rassul mayby insert a better Title for the diagramm?)
-python releaseYearPlot.py  -t category --title " (Hugendubel)"  --includeNo True --catLimit 30  -i  ..\..\Rassul_Chsheriyazdanov_Scrapers\Data\all_books_normalized.json
+python releaseYearPlot.py  -t category --title " (Hugendubel)"  --includeNo True --catLimit 30  -i  ..\..\Rassul_Chsheriyazdanov_Scrapers\Data\all_books_normalized1.json
 
 #Plot Mouna 
-python releaseYearPlot.py  -t category --title " (Perlentaucher,Kulturkaufhaus)" --catLimit 30  --includeNo True  -i  ..\Formating\mouna.jsonl
+python releaseYearPlot.py  -t category --title " (Perlentaucher,Kulturkaufhaus)" --catLimit 30  --includeNo True  -i  ..\Formating\mouna_final.jsonl
 
 
 -t producttyp 
@@ -35,8 +35,8 @@ all makes no sense cause e. g. are different cat Ebook and EBOOK
 python releaseYearPlot.py  -t producttyp  --title " (Combined)" --catLimit 30  --includeNo True  -i  ..\..\CombinedDataSet\All\combined_D_R_M.jsonl 
 
 python releaseYearPlot.py  -t producttyp  --title " (Thalia)" --catLimit 30  --includeNo True  -i  ..\Formating\danielBooks.jsonl 
-python releaseYearPlot.py  -t producttyp  --title " (Perlentaucher,Kulturkaufhaus)" --catLimit 30  --includeNo True  -i  ..\Formating\mouna.jsonl
-python releaseYearPlot.py  -t producttyp  --title " (Hugendubel)" --catLimit 30  --includeNo True  -i   ..\..\Rassul_Chsheriyazdanov_Scrapers\Data\all_books_normalized.json
+python releaseYearPlot.py  -t producttyp  --title " (Perlentaucher,Kulturkaufhaus)" --catLimit 30  --includeNo True  -i  ..\Formating\mouna_final.jsonl
+python releaseYearPlot.py  -t producttyp  --title " (Hugendubel)" --catLimit 30  --includeNo True  -i   ..\..\Rassul_Chsheriyazdanov_Scrapers\Data\all_books_normalized1.json
 
 -t author
 python releaseYearPlot.py  -t author  --title " (Combined)" --catLimit 30 --logScale True  --includeNo True    -i  ..\..\CombinedDataSet\All\combined_D_R_M.jsonl 
