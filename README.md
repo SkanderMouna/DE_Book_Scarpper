@@ -39,7 +39,11 @@ Note: all object content should be in german language
   From each website, a JSON file will be saved, and the final scraped data file is named ll.json, in which I have fused all the scraped data and made some cleaning and modifications.
   Also there is another `readme.md` file to explain more my scraper
 * `Rassul` [GitHub Repository]()
-  *  [Hugendubel](https://www.hugendubel.de/de/) 
+  *  [Hugendubel](https://www.hugendubel.de/de/)
+
+## Flow
+![Scraper Flow](scraperFlow.png)
+
 
 
 
